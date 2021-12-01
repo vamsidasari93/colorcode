@@ -1,0 +1,24 @@
+﻿<div class="card mt-4">
+    <h4 class="card-header">Home</h4>
+    <div class="card-body">
+     
+        <!-- <ul *ngIf="userFromApi">
+            <li>{{userFromApi.firstName}} {{userFromApi.lastName}}</li>
+        </ul> -->
+        <div>
+            <mat-form-field class="example-form-field" appearance="outline">
+                <mat-label>Type Color EX : sky,Lemon</mat-label>
+                <input matInput type="text" [(ngModel)]="value" (keyup)="isSearch()">
+              </mat-form-field>
+            <div *ngFor="let c of colordata">
+              <div class="w-100"  fxLayout="row wrap" fxLayout.xs="column wrap" fxLayoutAlign.xs="space-between center" fxLayoutGap="10px" fxLayoutAlign="space-between center">
+                <div *ngFor= "let code of c.hexValues" fxFlex="10" fxFlex.xs = "100" >
+                    <mat-card  [ngStyle]="{'background-color':code}">{{code}}</mat-card>
+                                    </div>
+              </div>
+            
+            </div>
+        </div>
+
+    </div>
+</div>
